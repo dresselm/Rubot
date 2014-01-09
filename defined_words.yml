@@ -1,6 +1,11 @@
 ---
 Ninjex: My Master
-pi: '3.14'
+pi: '3.14159265358979323846264338327950288419716939937510582097494459230781640628'
 wall: amazing
 me: him
 Rbot: an IRC bot coded in Ruby
+amount: SELECT SUM(amount) FROM words WHERE user =
+total_words: 
+rec: a * b
+squared: ! '**2'
+formula: a * b * c

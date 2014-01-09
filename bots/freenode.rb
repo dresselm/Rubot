@@ -1,5 +1,5 @@
 @server = 'rajaniemi.freenode.net'
 @port = 6667
-@nick = 'Ruboy'
-@name = 'Ruboy'
+@nick = 'x0rm'
+@name = 'x0rm'
 @chan = '#chat'

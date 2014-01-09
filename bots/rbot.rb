@@ -2,4 +2,4 @@
 @port = 6667
 @nick = 'Rbot'
 @name = 'Rbot'
-@chan = '#tester'
+@chan = '#wall'

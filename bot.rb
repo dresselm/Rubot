@@ -14,7 +14,7 @@ require 'mysql'
 require_relative 'settings'   # Functions loads all the functions correctly
 require_relative 'functions'  # Functions loads all the functions correctly
 require_relative './MySQL/mysql_info.rb'
-#require '/files/passwords.rb'
+require_relative './files/passwords.rb'
 @irc = TCPSocket.open(@server, @port)
 @state = 0
 
@@ -74,9 +74,9 @@ def main(chan, nick, name)
       if @input[1] == '376'
         send_data("JOIN #{@chan}")
         sleep(1)
-        send_data("MODE #{@nick} +B")
-        sleep(1)
-        send_data("PRIVMSG NickServ :IDENTIFY #{@pass}")
+        #send_data("MODE #{@nick} +B")
+        #sleep(1)
+        #send_data("PRIVMSG NickServ :IDENTIFY #{@pass}")
       end
     end
   end

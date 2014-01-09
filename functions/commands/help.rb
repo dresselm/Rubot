@@ -6,7 +6,7 @@ def help
   c = '__  /_/ /_  __ \  __ \  __/  ________     __  __ \  _ \_  /___  __ \\'
   d = '_  _  _/_  /_/ / /_/ / /_    _/_____/     _  / / /  __/  / __  /_/ /'
   e = '/_/ |_| /_.___/\____/\__/                 /_/ /_/\___//_/  _  .___/'
-  f = '                    www.github.com/ninjex/rbot          /_/'
+  f = '                    www.github.com/ninjex/rubot         /_/'
 
   chan_send("I will send my commands to your pm, #{@user_name_first}")
   send_data("PRIVMSG #{u} :#{a}")
