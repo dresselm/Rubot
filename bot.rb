@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 #@defined_words = {"Ninjex" => "My master"}
-@mods   =   [':Ninjex!~ninjex@71-80-88-115.dhcp.kgpt.tn.charter.com']
-@admin  =   ':Ninjex!~ninjex@71-80-88-115.dhcp.kgpt.tn.charter.com'
+@mods   =   []
+@admin  =   ''
 require 'socket'      # Create connections with the server
 require 'nokogiri'    # Scrape data from websites
 require 'open-uri'    # Open website content (for scraps)
