@@ -1,20 +1,29 @@
 def get_message
-  text, message = @input.drop(4), '' # Grab all data following a command
-  text.map{|word| message += "#{word} "}
+  text = @input.drop(4) # Grab all data following a command
+  
+  # What is this doing? The return val is not being stored anywhere
+  #    text.map{|word| message += "#{word} "}
+  # I think you want this
+  message = text.join(' ')
 
-  output = File.new('defined_words.yml', 'r')
-  @defined_words = YAML.load(output.read)
-  output.close
+  yaml_words    = File.read('defined_words.yml')
+  defined_words = YAML.load(yaml_words)
+
   text.each do |check_word| # Each word from the user
-
-    @defined_words.each do |word, defi| # The words and definitions
+    defined_words.each do |word, defi| # The words and definitions
       #new_word = word #"%"+word               # Add % to the word to check
       if word == check_word
-        message = message.gsub("#{check_word}", "#{defi}")
+        # Use bang! here to change it in place
+        message.gsub!("#{check_word}", "#{defi}")
       end
     end
 
   end
-  message = message.strip!  # Remove the trailing whitespace
-  return message            # Return the variable
+  
+  # Be very careful here: strip! will return nil if nothing is stripped
+  #   message = message.strip!  # Remove the trailing whitespace
+  # Don't need return in ruby
+  #   return message            # Return the variable
+  
+  message.strip
 end
